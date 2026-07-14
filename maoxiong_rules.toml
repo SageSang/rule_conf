@@ -1,0 +1,544 @@
+# ==========================================================
+# 规则集（rule_sets）
+# 由当前项目 meta.ini 转换；本文件仅描述规则集和代理组生成逻辑。
+# ==========================================================
+
+# --- 0) Adobe / 私网直连 / AI 与推送前置规则 ---
+[[rule_sets]]
+group = "🟥 Adobe"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/adobe.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/private.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/classical/private.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+url = "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+url = "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml"
+type = "rule-set"
+
+# --- AI / 风控敏感服务：必须早于中国直连 ---
+[[rule_sets]]
+group = "🤖 ChatGPT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🧠 AI"
+url = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/AI.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🧠 AI"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🧠 AI"
+url = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🧠 AI"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-ai-!cn.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "📢 Google FCM"
+url = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml"
+type = "rule-set"
+
+# --- 国内直连 ---
+[[rule_sets]]
+group = "DIRECT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cn.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+type = "geoip"
+value = "CN"
+
+[[rule_sets]]
+group = "🚀 手动选择"
+url = "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🚀 手动选择"
+url = "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml"
+type = "rule-set"
+
+# --- 1) 国内可用 / 下载 / BT/PT ---
+[[rule_sets]]
+group = "⬇️ Steam / Epic 下载"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/steam%40cn.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "♨️ Steam"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/steam.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "⬇️ Steam / Epic 下载"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/epicgames%40cn.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🛍️ Epic Games"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/epicgames.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "⭐ Rockstar"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/rockstar.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-cn.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "DIRECT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-game-platforms-download.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "⬇️ BT/PT 下载"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/bt.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "⬇️ BT/PT 下载"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/pt.yaml"
+type = "rule-set"
+
+# --- 2) 核心应用、流媒体、社交与开发工具 ---
+[[rule_sets]]
+group = "📦 Notion"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/notion.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "📨 Telegram"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/telegram.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "📨 Telegram"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/classical/telegram.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🤖 ChatGPT"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🍎 Apple"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🎬 YouTube"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/youtube.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🎥 Netflix"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/netflix.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🎥 Netflix"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/classical/netflix.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🏰 DisneyPlus"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/disney.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🎵 TikTok"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tiktok.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "💬 WhatsApp"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/whatsapp.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "📸 Instagram"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/instagram.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🐦 X"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitter.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🧑‍💻 GitHub"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🚝 测速工具"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-speedtest.yaml"
+type = "rule-set"
+
+# --- 3) 交易、通信、Google / Microsoft ---
+[[rule_sets]]
+group = "🟦 OKX"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/okx.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🟨 Binance"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/binance.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🟪 Bybit"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bybit.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "📞 即时通讯"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-communication.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "💬 社交媒体"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-social-media-!cn.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "↔️ teamviewer"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/teamviewer.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "☁️ cloudflare"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cloudflare.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "☁️ cloudflare"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/classical/cloudflare.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🔎 Google"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🔎 Google"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/classical/google.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🪟 Microsoft"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/microsoft.yaml"
+type = "rule-set"
+
+# --- 4) GFW、非标端口、兜底 ---
+[[rule_sets]]
+group = "🚀 手动选择"
+url = "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/gfw.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🔀 非标端口"
+url = "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
+type = "rule-set"
+
+[[rule_sets]]
+group = "🐟 漏网之鱼"
+type = "final"
+
+# ==========================================================
+# 代理组（proxy_groups）
+# ==========================================================
+
+[[proxy_groups]]
+name = "🧭 手动选择"
+type = "select"
+regex = "."
+
+[[proxy_groups]]
+name = "♻️ 自动选择"
+type = "url-test"
+regex = "."
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇭🇰 HK"
+type = "url-test"
+regex = "(?i)(🇭🇰|香港|HK|hong kong)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇹🇼 TW"
+type = "url-test"
+regex = "(?i)(🇹🇼|台湾|TW|taiwan|taipei|hinet)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇯🇵 JP"
+type = "url-test"
+regex = "(?i)(🇯🇵|日本|JP|tokyo|osaka)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇸🇬 SG"
+type = "url-test"
+regex = "(?i)(🇸🇬|新加坡|SG|singapore)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇺🇸 US"
+type = "url-test"
+regex = "(?i)(🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇦🇷 AR"
+type = "url-test"
+regex = "(?i)(🇦🇷|阿根廷|AR|argentina|buenos aires)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇬🇧 UK"
+type = "url-test"
+regex = "(?i)(🇬🇧|英国|英國|UK|GB|united kingdom|london|manchester)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇩🇪 DE"
+type = "url-test"
+regex = "(?i)(🇩🇪|德国|德國|DE|germany|frankfurt|berlin)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🧊 冷门节点"
+type = "select"
+# 使用正向地区名单，避免“负向前瞻 + 通配符”触发校验器的回溯保护。
+regex = "(?i)(🇦🇺|澳大利亚|澳洲|AU|🇨🇦|加拿大|CA|🇫🇷|法国|FR|🇰🇷|韩国|KR|🇳🇱|荷兰|NL|🇲🇾|马来西亚|MY|🇹🇭|泰国|TH|🇮🇳|印度|IN|🇹🇷|土耳其|TR|🇷🇺|俄罗斯|RU|🇧🇷|巴西|BR|🇮🇩|印度尼西亚|ID|🇵🇭|菲律宾|PH|🇻🇳|越南|VN|🇲🇴|澳门|MO|australia|canada|france|korea|netherlands|malaysia|thailand|india|turkey|russia|brazil|indonesia|philippines|vietnam|macau|europe)"
+
+# 应用组的可选出口：保持 meta.ini 中的优先顺序。
+[[proxy_groups]]
+name = "📦 Notion"
+type = "select"
+proxies = ["♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🍎 Apple"
+type = "select"
+proxies = ["🇬🇧 UK", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🤖 ChatGPT"
+type = "select"
+proxies = ["🇺🇸 US", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🧠 AI"
+type = "select"
+proxies = ["🇺🇸 US", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📨 Telegram"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📞 即时通讯"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "💬 社交媒体"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "↔️ teamviewer"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🎬 YouTube"
+type = "select"
+proxies = ["♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🎥 Netflix"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🏰 DisneyPlus"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🎵 TikTok"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "💬 WhatsApp"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📸 Instagram"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🐦 X"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🧑‍💻 GitHub"
+type = "select"
+proxies = ["♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🚝 测速工具"
+type = "select"
+proxies = ["DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "⬇️ Steam / Epic 下载"
+type = "select"
+proxies = ["DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "♨️ Steam"
+type = "select"
+proxies = ["🇦🇷 AR", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🛍️ Epic Games"
+type = "select"
+proxies = ["🇦🇷 AR", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "⭐ Rockstar"
+type = "select"
+proxies = ["🇦🇷 AR", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "⬇️ BT/PT 下载"
+type = "select"
+proxies = ["DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟦 OKX"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "DIRECT", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟨 Binance"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟪 Bybit"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟥 Adobe"
+type = "select"
+proxies = ["♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "DIRECT", "REJECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🔎 Google"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📢 Google FCM"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇯🇵 JP", "🇺🇸 US", "🇹🇼 TW", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "☁️ cloudflare"
+type = "select"
+proxies = ["♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🪟 Microsoft"
+type = "select"
+proxies = ["♻️ 自动选择", "DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "🌐 Default"]
+
+# --- 全局、手动、非标端口与兜底 ---
+[[proxy_groups]]
+name = "🚀 手动选择"
+type = "select"
+proxies = ["🇸🇬 SG", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "🌐 Default"
+type = "select"
+proxies = ["🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "GLOBAL"
+type = "select"
+proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "🐟 漏网之鱼"
+type = "select"
+proxies = ["DIRECT", "🚀 手动选择", "🌐 Default", "♻️ 自动选择", "🧊 冷门节点", "🧭 手动选择"]
+
+[[proxy_groups]]
+name = "🔀 非标端口"
+type = "select"
+proxies = ["🐟 遵循规则", "DIRECT"]
+
+[[proxy_groups]]
+name = "🐟 遵循规则"
+type = "select"
+proxies = ["🐟 漏网之鱼"]
