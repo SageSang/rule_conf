@@ -274,6 +274,187 @@ type = "final"
 # 代理组（proxy_groups）
 # ==========================================================
 
+# --- 策略组展示顺序：应用、基础控制、五国优质/普通成对、常用国家、冷门节点 ---
+[[proxy_groups]]
+name = "🍎 Apple"
+type = "select"
+proxies = ["🇺🇸 US", "🇺🇸 优质美国", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "♊ Gemini"
+type = "select"
+proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🤖 ChatGPT"
+type = "select"
+proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🧠 AI"
+type = "select"
+proxies = ["🇺🇸 US", "🇺🇸 优质美国", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📨 Telegram"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📞 即时通讯"
+type = "select"
+proxies = ["🇺🇸 US", "🇺🇸 优质美国", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "💬 社交媒体"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🎬 YouTube"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🎥 Netflix"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🏰 DisneyPlus"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🎵 TikTok"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "💬 WhatsApp"
+type = "select"
+proxies = ["🇸🇬 优质新加坡", "🇸🇬 SG", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "📸 Instagram"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🐦 X"
+type = "select"
+proxies = ["🇺🇸 US", "🇺🇸 优质美国", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🧑‍💻 GitHub"
+type = "select"
+proxies = ["🌐 Default", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择"]
+
+[[proxy_groups]]
+name = "🚝 测速工具"
+type = "select"
+proxies = ["DIRECT", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "⬇️ Steam / Epic 下载"
+type = "select"
+proxies = ["DIRECT", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "♨️ Steam"
+type = "select"
+proxies = ["🇦🇷 AR", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🛍️ Epic Games"
+type = "select"
+proxies = ["🇦🇷 AR", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "⭐ Rockstar"
+type = "select"
+proxies = ["🇦🇷 AR", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "⬇️ BT/PT 下载"
+type = "select"
+proxies = ["DIRECT", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟦 OKX"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "DIRECT", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟨 Binance"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟪 Bybit"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🟥 Adobe"
+type = "select"
+proxies = ["REJECT", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🌐 Default", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "📞 Google Voice"
+type = "select"
+proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🔎 Google"
+type = "select"
+proxies = ["🌐 Default", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择"]
+
+[[proxy_groups]]
+name = "📢 Google FCM"
+type = "select"
+proxies = ["🇺🇸 US", "🇺🇸 优质美国", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
+
+[[proxy_groups]]
+name = "☁️ cloudflare"
+type = "select"
+proxies = ["🌐 Default", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇸🇬 优质新加坡", "🇸🇬 SG", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择"]
+
+[[proxy_groups]]
+name = "🪟 Microsoft"
+type = "select"
+proxies = ["🇸🇬 SG", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇭🇰 HK", "🇹🇼 优质台湾", "🇹🇼 TW", "🇺🇸 优质美国", "🇺🇸 US", "🇯🇵 优质日本", "🇯🇵 JP", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "♻️ 自动选择", "DIRECT", "🧭 手动选择", "🌐 Default"]
+
+[[proxy_groups]]
+name = "🚀 手动选择"
+type = "select"
+proxies = ["🇸🇬 SG", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "🌐 Default"
+type = "select"
+proxies = ["🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "GLOBAL"
+type = "select"
+proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+
+[[proxy_groups]]
+name = "🐟 漏网之鱼"
+type = "select"
+proxies = ["DIRECT", "🚀 手动选择", "🌐 Default", "♻️ 自动选择", "🧊 冷门节点", "🧭 手动选择"]
+
+[[proxy_groups]]
+name = "🔀 非标端口"
+type = "select"
+proxies = ["🐟 遵循规则", "DIRECT"]
+
+[[proxy_groups]]
+name = "🐟 遵循规则"
+type = "select"
+proxies = ["🐟 漏网之鱼"]
+
 [[proxy_groups]]
 name = "🧭 手动选择"
 type = "select"
@@ -287,38 +468,77 @@ url = "https://www.gstatic.com/generate_204"
 interval = 300
 tolerance = 50
 
-# 普通国家节点：排除优质标签，避免与优质故障切换组交叉。
-# 五个特权国家：普通节点按延迟自动选优；优质节点故障切换。
-# 五个特权国家：普通节点按延迟自动选优；普通 IEPL 与优质节点均排除。
-# 五个特权国家：普通节点按延迟自动选优，并与优质标签互斥。
+[[proxy_groups]]
+name = "🇭🇰 优质香港"
+type = "fallback"
+regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])).*(?:🇭🇰|香港|HK|hong kong)|(?:🇭🇰|香港|HK|hong kong).*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])))"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+
 [[proxy_groups]]
 name = "🇭🇰 HK"
 type = "url-test"
-regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x)).*(?:🇭🇰|香港|HK|hong kong)"
+regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))).*(?:🇭🇰|香港|HK|hong kong)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
 tolerance = 50
+
+[[proxy_groups]]
+name = "🇹🇼 优质台湾"
+type = "fallback"
+regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])).*(?:🇹🇼|台湾|台灣|TW|taiwan|taipei|hinet)|(?:🇹🇼|台湾|台灣|TW|taiwan|taipei|hinet).*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])))"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
 
 [[proxy_groups]]
 name = "🇹🇼 TW"
 type = "url-test"
-regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x)).*(?:🇹🇼|台湾|台灣|TW|taiwan|taipei|hinet)"
+regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))).*(?:🇹🇼|台湾|台灣|TW|taiwan|taipei|hinet)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
 tolerance = 50
+
+[[proxy_groups]]
+name = "🇺🇸 优质美国"
+type = "fallback"
+regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])).*(?:🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york)|(?:🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york).*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])))"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+
+[[proxy_groups]]
+name = "🇺🇸 US"
+type = "url-test"
+regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))).*(?:🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york)"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+tolerance = 50
+
+[[proxy_groups]]
+name = "🇯🇵 优质日本"
+type = "fallback"
+regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])).*(?:🇯🇵|日本|JP|tokyo|osaka)|(?:🇯🇵|日本|JP|tokyo|osaka).*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])))"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
 
 [[proxy_groups]]
 name = "🇯🇵 JP"
 type = "url-test"
-regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x)).*(?:🇯🇵|日本|JP|tokyo|osaka)"
+regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))).*(?:🇯🇵|日本|JP|tokyo|osaka)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
 tolerance = 50
 
 [[proxy_groups]]
+name = "🇸🇬 优质新加坡"
+type = "fallback"
+regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])).*(?:🇸🇬|新加坡|SG|singapore)|(?:🇸🇬|新加坡|SG|singapore).*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9])))"
+url = "https://www.gstatic.com/generate_204"
+interval = 300
+
+[[proxy_groups]]
 name = "🇸🇬 SG"
 type = "url-test"
-regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x)).*(?:🇸🇬|新加坡|SG|singapore)"
+regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))).*(?:🇸🇬|新加坡|SG|singapore)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
 tolerance = 50
@@ -329,14 +549,6 @@ type = "fallback"
 regex = "(?i)(?:🇰🇷|韩国|韓國|KR|korea|seoul)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
-
-[[proxy_groups]]
-name = "🇺🇸 US"
-type = "url-test"
-regex = "(?i)^(?!.*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x)).*(?:🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york)"
-url = "https://www.gstatic.com/generate_204"
-interval = 300
-tolerance = 50
 
 [[proxy_groups]]
 name = "🇨🇦 CA"
@@ -443,228 +655,9 @@ regex = "(?i)(?:🇿🇦|南非|ZA|south africa|johannesburg)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
 
-# 优质节点：仅香港、台湾、美国、日本、新加坡；标签为进阶IEPL、专线、原生、家宽、星链、2x-5x。
-[[proxy_groups]]
-name = "🇭🇰 优质香港"
-type = "fallback"
-regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x).*(?:🇭🇰|香港|HK|hong kong)|(?:🇭🇰|香港|HK|hong kong).*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x))"
-url = "https://www.gstatic.com/generate_204"
-interval = 300
-
-[[proxy_groups]]
-name = "🇹🇼 优质台湾"
-type = "fallback"
-regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x).*(?:🇹🇼|台湾|台灣|TW|taiwan|taipei|hinet)|(?:🇹🇼|台湾|台灣|TW|taiwan|taipei|hinet).*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x))"
-url = "https://www.gstatic.com/generate_204"
-interval = 300
-
-[[proxy_groups]]
-name = "🇺🇸 优质美国"
-type = "fallback"
-regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x).*(?:🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york)|(?:🇺🇸|美国|US|united states|los angeles|san jose|seattle|new york).*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x))"
-url = "https://www.gstatic.com/generate_204"
-interval = 300
-
-[[proxy_groups]]
-name = "🇯🇵 优质日本"
-type = "fallback"
-regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x).*(?:🇯🇵|日本|JP|tokyo|osaka)|(?:🇯🇵|日本|JP|tokyo|osaka).*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x))"
-url = "https://www.gstatic.com/generate_204"
-interval = 300
-
-[[proxy_groups]]
-name = "🇸🇬 优质新加坡"
-type = "fallback"
-regex = "(?i)(?:(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x).*(?:🇸🇬|新加坡|SG|singapore)|(?:🇸🇬|新加坡|SG|singapore).*(?:进阶IEPL|专线|原生|家宽|星链|2x|3x|4x|5x))"
-url = "https://www.gstatic.com/generate_204"
-interval = 300
-
-# 其余 14 个国家合并为冷门池，不受五国优质筛选影响。
 [[proxy_groups]]
 name = "🧊 冷门节点"
 type = "fallback"
 regex = "(?i)(?:🇲🇴|澳门|澳門|MO|macau|🇹🇭|泰国|泰國|TH|thailand|bangkok|🇮🇩|印度尼西亚|印度尼西亞|ID|indonesia|jakarta|🇻🇳|越南|VN|vietnam|hanoi|🇵🇭|菲律宾|菲律賓|PH|philippines|manila|🇳🇿|新西兰|新西蘭|NZ|new zealand|auckland|🇧🇷|巴西|BR|brazil|sao paulo|🇲🇽|墨西哥|MX|mexico|🇨🇱|智利|CL|chile|🇳🇱|荷兰|荷蘭|NL|netherlands|amsterdam|🇳🇴|挪威|NO|norway|oslo|🇦🇪|阿联酋|阿聯酋|AE|uae|dubai|🇸🇦|沙特(?:阿拉伯)?|SA|saudi|riyadh|🇳🇬|尼日利亚|尼日利亞|NG|nigeria|lagos)"
 url = "https://www.gstatic.com/generate_204"
 interval = 300
-
-# 应用组的可选出口：保持 meta.ini 中的优先顺序。
-[[proxy_groups]]
-name = "🍎 Apple"
-type = "select"
-proxies = ["🇺🇸 US", "🇬🇧 UK", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇦🇷 AR", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "♊ Gemini"
-type = "select"
-proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🤖 ChatGPT"
-type = "select"
-proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🧠 AI"
-type = "select"
-proxies = ["🇺🇸 US", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "📨 Telegram"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "📞 即时通讯"
-type = "select"
-proxies = ["🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "💬 社交媒体"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🎬 YouTube"
-type = "select"
-proxies = ["🇸🇬 SG", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🎥 Netflix"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🏰 DisneyPlus"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🎵 TikTok"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "💬 WhatsApp"
-type = "select"
-proxies = ["🇸🇬 优质新加坡", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "📸 Instagram"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🐦 X"
-type = "select"
-proxies = ["🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🧑‍💻 GitHub"
-type = "select"
-proxies = ["🌐 Default", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择"]
-
-[[proxy_groups]]
-name = "🚝 测速工具"
-type = "select"
-proxies = ["DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "⬇️ Steam / Epic 下载"
-type = "select"
-proxies = ["DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "♨️ Steam"
-type = "select"
-proxies = ["🇦🇷 AR", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🛍️ Epic Games"
-type = "select"
-proxies = ["🇦🇷 AR", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "⭐ Rockstar"
-type = "select"
-proxies = ["🇦🇷 AR", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "⬇️ BT/PT 下载"
-type = "select"
-proxies = ["DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🟦 OKX"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "DIRECT", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🟨 Binance"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🟪 Bybit"
-type = "select"
-proxies = ["🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🟥 Adobe"
-type = "select"
-proxies = ["REJECT", "🌐 Default", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "DIRECT"]
-
-[[proxy_groups]]
-name = "📞 Google Voice"
-type = "select"
-proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "🌐 Default"]
-
-[[proxy_groups]]
-name = "🔎 Google"
-type = "select"
-proxies = ["🌐 Default", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择"]
-
-[[proxy_groups]]
-name = "📢 Google FCM"
-type = "select"
-proxies = ["🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇯🇵 JP", "🇹🇼 TW", "🇰🇷 KR", "🇨🇦 CA", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "♻️ 自动选择", "DIRECT", "🌐 Default"]
-
-[[proxy_groups]]
-name = "☁️ cloudflare"
-type = "select"
-proxies = ["🌐 Default", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择"]
-
-[[proxy_groups]]
-name = "🪟 Microsoft"
-type = "select"
-proxies = ["🇸🇬 SG", "♻️ 自动选择", "DIRECT", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🇰🇷 KR", "🇨🇦 CA", "🇫🇷 FR", "🇮🇳 IN", "🇲🇾 MY", "🇹🇷 TR", "🇷🇺 RU", "🇺🇦 UA", "🇮🇹 IT", "🇵🇰 PK", "🇪🇬 EG", "🇦🇺 AU", "🇿🇦 ZA", "🧊 冷门节点", "🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🧭 手动选择", "🌐 Default"]
-
-# --- 全局、手动、非标端口与兜底 ---
-[[proxy_groups]]
-name = "🚀 手动选择"
-type = "select"
-proxies = ["🇸🇬 SG", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "🧭 手动选择", "DIRECT"]
-
-[[proxy_groups]]
-name = "🌐 Default"
-type = "select"
-proxies = ["🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
-
-[[proxy_groups]]
-name = "GLOBAL"
-type = "select"
-proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
-
-[[proxy_groups]]
-name = "🐟 漏网之鱼"
-type = "select"
-proxies = ["DIRECT", "🚀 手动选择", "🌐 Default", "♻️ 自动选择", "🧊 冷门节点", "🧭 手动选择"]
-
-[[proxy_groups]]
-name = "🔀 非标端口"
-type = "select"
-proxies = ["🐟 遵循规则", "DIRECT"]
-
-[[proxy_groups]]
-name = "🐟 遵循规则"
-type = "select"
-proxies = ["🐟 漏网之鱼"]
