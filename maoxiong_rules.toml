@@ -438,7 +438,7 @@ proxies = ["🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸
 [[proxy_groups]]
 name = "GLOBAL"
 type = "select"
-proxies = ["🇺🇸 优质美国", "🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+proxies = ["🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质香港", "🇹🇼 优质台湾", "🇯🇵 优质日本", "🇺🇸 US", "🇸🇬 SG", "🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
 
 [[proxy_groups]]
 name = "🐟 漏网之鱼"
