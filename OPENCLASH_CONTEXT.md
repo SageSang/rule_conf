@@ -30,6 +30,7 @@
 5. 不新增宽泛的 `google.com`、`googleapis.com` 等域名规则到单个应用组，以免覆盖普通 Google、Play 或其他应用。
 6. GitHub Raw 链接不得包含 `refs/heads`。例如 `https://raw.githubusercontent.com/<owner>/<repo>/master/<path>`，而不是 `.../refs/heads/master/<path>`。
 7. 不做 `0.1x` 的全局订阅排除；仅香港、台湾、美国、日本、新加坡五个普通国家组应排除精确的 `0.1x` 节点。优质组和其他国家不受此条件影响。
+8. 国家英文缩写必须按单词边界匹配；例如美国使用 `\bUS\b`，不能使用裸 `US`，避免将 `Australia` 等名称误归入美国组。
 
 ## 规则来源与查找顺序
 
