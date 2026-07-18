@@ -27,7 +27,7 @@
 4. 规则源优先使用维护活跃且可验证的 Clash YAML。新增后确认 HTTP 200 和实际内容，再执行 `git diff --check`。
 5. 不新增宽泛的 `google.com`、`googleapis.com` 等域名规则到单个应用组，以免覆盖普通 Google、Play 或其他应用。
 6. GitHub Raw 链接不得包含 `refs/heads`。例如 `https://raw.githubusercontent.com/<owner>/<repo>/master/<path>`，而不是 `.../refs/heads/master/<path>`。
-7. 节点名称含 `0.1x` 必须在订阅转换阶段全局排除，不得进入任何国家、优质或应用策略组。
+7. 不做 `0.1x` 的全局订阅排除；仅香港、台湾、美国、日本、新加坡五个普通国家组应排除精确的 `0.1x` 节点。优质组和其他国家不受此条件影响。
 
 ## 规则来源与查找顺序
 
