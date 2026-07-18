@@ -5,7 +5,7 @@
 
 # 与 meta.ini 的 [custom].exclude 同步；名称含这些关键词的订阅节点不得参与任何策略组。
 [subscription_filters]
-exclude_regex = "流量|套餐|福利|到期|剩余|重置|官网|网站|最新网址|防失联|失联|官网地址|公告|通知|TG|Telegram|电报|群|频道|说明|使用说明|QQ群|客服|工单|订阅|Expire|Traffic|Reset|Remaining|Expire|Official|Website"
+exclude_regex = "流量|套餐|0\\.1x|到期|剩余|重置|官网|网站|最新网址|防失联|失联|官网地址|公告|通知|TG|Telegram|电报|群|频道|说明|使用说明|QQ群|客服|工单|订阅|Expire|Traffic|Reset|Remaining|Expire|Official|Website"
 
 # --- 0) Adobe / 私网直连 / AI 与推送前置规则 ---
 [[rule_sets]]
