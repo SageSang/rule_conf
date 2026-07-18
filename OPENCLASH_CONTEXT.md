@@ -15,9 +15,11 @@
 | 路由器生效配置 | `/etc/openclash/maoxiong.yaml` | 路由器上的转换后配置。 |
 | 本地模板 | `meta.ini` | OpenClash / SubConverter INI 源。 |
 | 本地 TOML | `maoxiong_rules.toml` | 与 `meta.ini` 等价的规则、策略组描述。 |
-| 私有补充节点 | `openclash-sub/private/openclash-private-extra-proxies.yaml` | 合并的本地节点 YAML；已被 `.gitignore` 排除，不能提交或公开。 |
+| Sub-Store 节点筛选 | `sub-store/operators/keep-core-premium-and-remote.js` | 仅筛选节点源，不含凭据、不生成策略组。 |
 
 网络角色为旁路代理网关：上级网段设备经 `192.168.31.4` 使用代理，流量最终经 `192.168.31.1` 出网。切换代理栈时，必须先停止 HomeProxy/sing-box，再启动 OpenClash；两者不能同时接管透明代理、DNS 与 `9090`。
+
+`openclash-sub/` 已废弃并删除；不再通过仓库内 Docker/Nginx 暴露私有节点文件。若使用 Sub-Store，将节点源汇总后使用上述脚本筛选，再将其生成的订阅地址交给客户端或 OpenClash。
 
 ## 维护规则
 
