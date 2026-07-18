@@ -433,7 +433,7 @@ proxies = ["🇸🇬 SG", "♻️ 自动选择", "🇭🇰 HK", "🇹🇼 TW", "
 [[proxy_groups]]
 name = "🌐 Default"
 type = "select"
-proxies = ["🇭🇰 HK", "🇹🇼 TW", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
+proxies = ["🇹🇼 TW", "🇭🇰 HK", "🇯🇵 JP", "🇸🇬 SG", "🇺🇸 US", "🇦🇷 AR", "🇬🇧 UK", "🇩🇪 DE", "🧊 冷门节点", "♻️ 自动选择", "🧭 手动选择", "DIRECT"]
 
 [[proxy_groups]]
 name = "GLOBAL"
@@ -443,7 +443,7 @@ proxies = ["🇺🇸 优质美国", "🇸🇬 优质新加坡", "🇭🇰 优质
 [[proxy_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
-proxies = ["DIRECT", "🚀 手动选择", "🌐 Default", "♻️ 自动选择", "🧊 冷门节点", "🧭 手动选择"]
+proxies = ["🌐 Default", "DIRECT", "🚀 手动选择", "♻️ 自动选择", "🧊 冷门节点", "🧭 手动选择"]
 
 [[proxy_groups]]
 name = "🔀 非标端口"
