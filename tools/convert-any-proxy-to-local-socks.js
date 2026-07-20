@@ -33,10 +33,16 @@
       if (!proxy || typeof proxy.name !== 'string' || !proxy.name.trim()) {
         throw new Error(`第 ${index + 1} 个节点缺少有效 name`);
       }
-      if (names.has(proxy.name)) {
-        throw new Error(`节点名称重复，无法创建唯一映射：${proxy.name}`);
+
+      const originalName = proxy.name;
+      let uniqueName = originalName;
+      let duplicateNumber = 2;
+      while (names.has(uniqueName)) {
+        uniqueName = `${originalName} #${duplicateNumber}`;
+        duplicateNumber += 1;
       }
-      names.add(proxy.name);
+      proxy.name = uniqueName;
+      names.add(uniqueName);
     });
   }
 
