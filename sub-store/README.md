@@ -2,6 +2,8 @@
 
 `operators/keep-core-premium-and-remote.js` 用于生成一个适合当前 OpenClash 分组的精简节点订阅。
 
+`operators/filter-sort-by-region-and-quality.js` 是独立的 Script Operator：删除订阅说明项、规范重复节点名称，并按地区排序；同一地区内优质节点排在普通节点之前。
+
 它保留以下节点：
 
 - 香港、台湾、美国、日本、新加坡中符合优质条件的节点；
