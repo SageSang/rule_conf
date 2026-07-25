@@ -2,7 +2,7 @@
  * Sub-Store Script Operator
  *
  * 删除订阅说明项、规范重复名称，并按地区排序：
- * 同一地区内，优质节点排在普通节点之前；同一等级保留订阅原顺序。
+ * 同一地区内，高倍率节点排在普通节点之前；同一等级保留订阅原顺序。
  */
 
 const EXCLUDE_NAME =
@@ -34,18 +34,18 @@ const REGION_RULES = [
   /(?:🇿🇦|南非|south\s*africa|johannesburg|\bZA\b)/i,
 ];
 
-// 与现有 OpenClash 优质节点定义一致。
-// 不会把 0.5x、1.5x、15x 误判为优质。
-const PREMIUM_QUALITY_PATTERN =
-  /(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))/i;
+// 与现有 OpenClash 高倍率节点定义一致：严格匹配数值大于 1x 的倍率。
+// 不会把 0.1x、0.5x、1x、1.0x 归为高倍率。
+const HIGH_MULTIPLIER_PATTERN =
+  /(?:^|[^0-9.])(?:1\.0*[1-9][0-9]*|(?:[2-9][0-9]*|1[0-9]+)(?:\.[0-9]+)?)x(?![0-9.])/i;
 
 function getRegionRank(name) {
   const rank = REGION_RULES.findIndex((rule) => rule.test(name));
   return rank === -1 ? REGION_RULES.length : rank;
 }
 
-function getQualityRank(name) {
-  return PREMIUM_QUALITY_PATTERN.test(name) ? 0 : 1;
+function getMultiplierRank(name) {
+  return HIGH_MULTIPLIER_PATTERN.test(name) ? 0 : 1;
 }
 
 async function operator(proxies, targetPlatform, context) {
@@ -77,7 +77,7 @@ async function operator(proxies, targetPlatform, context) {
         name: uniqueName,
       },
       regionRank: getRegionRank(originalName),
-      qualityRank: getQualityRank(originalName),
+      multiplierRank: getMultiplierRank(originalName),
       originalIndex: index,
     });
   }
@@ -86,7 +86,7 @@ async function operator(proxies, targetPlatform, context) {
     .sort(
       (a, b) =>
         a.regionRank - b.regionRank ||
-        a.qualityRank - b.qualityRank ||
+        a.multiplierRank - b.multiplierRank ||
         a.originalIndex - b.originalIndex,
     )
     .map(({ proxy }) => proxy);

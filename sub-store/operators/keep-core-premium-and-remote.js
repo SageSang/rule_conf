@@ -2,16 +2,16 @@
  * Sub-Store Script Filter / Script Operator
  *
  * 保留：
- *   1. 香港、台湾、美国、日本、新加坡中带有“优质”标签的节点；
+ *   1. 香港、台湾、美国、日本、新加坡中带有高倍率标签的节点；
  *   2. 上述五国以外的所有节点（含未能识别国家的节点，避免误删）。
  *
  * 丢弃：
- *   五个核心国家中，不带优质标签的普通节点。
+ *   五个核心国家中，不带高倍率标签的普通节点。
  *
  * 此脚本只筛选节点，不改名、不排序、不生成策略组。
  */
 
-// 五个享有“优质/普通”分层的核心国家。
+// 五个享有“高倍率/普通”分层的核心国家。
 // 缩写使用非字母边界，避免把普通英文单词误识别为国家代码。
 const CORE_COUNTRY_PATTERNS = [
   /(?:🇭🇰|香港|hong\s*kong|(?:^|[^a-z])hk(?:$|[^a-z]))/i,
@@ -21,25 +21,23 @@ const CORE_COUNTRY_PATTERNS = [
   /(?:🇸🇬|新加坡|singapore|(?:^|[^a-z])sg(?:$|[^a-z]))/i,
 ];
 
-// 与当前 OpenClash 配置一致：
-// 进阶IEPL、专线、原生、家宽、星链，或独立的 2x/3x/4x/5x。
-// 不将 IEPL、CN2、IPLC、进阶、1x 单独视为优质。
-// 倍率边界避免 0.5x、1.5x、15x 被误匹配为 5x。
-const PREMIUM_QUALITY_PATTERN = /(?:进阶IEPL|专线|原生|家宽|星链|(?:^|[^0-9.])(?:2x|3x|4x|5x)(?![0-9]))/i;
+// 与当前 OpenClash 配置一致：严格匹配数值大于 1x 的倍率标签。
+// 0.1x、0.5x、1x、1.0x 不属于高倍率；线路类型词本身不作为高倍率条件。
+const HIGH_MULTIPLIER_PATTERN = /(?:^|[^0-9.])(?:1\.0*[1-9][0-9]*|(?:[2-9][0-9]*|1[0-9]+)(?:\.[0-9]+)?)x(?![0-9.])/i;
 
 function isCoreCountry(name) {
   return CORE_COUNTRY_PATTERNS.some((pattern) => pattern.test(name));
 }
 
-function isPremium(name) {
-  return PREMIUM_QUALITY_PATTERN.test(name);
+function isHighMultiplier(name) {
+  return HIGH_MULTIPLIER_PATTERN.test(name);
 }
 
 function shouldKeep(proxy) {
   const name = String(proxy && proxy.name ? proxy.name : "");
 
   // 节点名称无法判断国家时保留；这是保守策略，避免供应商的自定义命名被误删。
-  return !isCoreCountry(name) || isPremium(name);
+  return !isCoreCountry(name) || isHighMultiplier(name);
 }
 
 // “脚本过滤（Script Filter）”使用此入口，返回与节点数组等长的布尔数组。
