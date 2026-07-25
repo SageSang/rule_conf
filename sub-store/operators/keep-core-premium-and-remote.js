@@ -12,21 +12,32 @@
  */
 
 // 五个享有“高倍率/普通”分层的核心国家。
-// 缩写使用非字母边界，避免把普通英文单词误识别为国家代码。
-const CORE_COUNTRY_PATTERNS = [
-  /(?:🇭🇰|香港|hong\s*kong|(?:^|[^a-z])hk(?:$|[^a-z]))/i,
-  /(?:🇹🇼|台湾|台灣|taiwan|taipei|hinet|(?:^|[^a-z])tw(?:$|[^a-z]))/i,
-  /(?:🇺🇸|美国|美國|united\s*states|los\s*angeles|san\s*francisco|san\s*jos[eé]|seattle|new\s*york|(?:^|[^a-z])us(?:$|[^a-z]))/i,
-  /(?:🇯🇵|日本|japan|tokyo|osaka|(?:^|[^a-z])jp(?:$|[^a-z]))/i,
-  /(?:🇸🇬|新加坡|singapore|(?:^|[^a-z])sg(?:$|[^a-z]))/i,
+// 英文别名可忽略大小写；ISO 两位代码只匹配大写完整单词。
+const CORE_COUNTRY_NAME_PATTERNS = [
+  /(?:🇭🇰|香港|hong\s*kong)/i,
+  /(?:🇹🇼|台湾|台灣|taiwan|taipei|hinet)/i,
+  /(?:🇺🇸|美国|美國|united\s*states|los\s*angeles|san\s*francisco|seattle|new\s*york)/i,
+  /(?:🇯🇵|日本|japan|tokyo|osaka)/i,
+  /(?:🇸🇬|新加坡|singapore)/i,
 ];
 
-// 与当前 OpenClash 配置一致：严格匹配数值大于 1x 的倍率标签。
-// 0.1x、0.5x、1x、1.0x 不属于高倍率；线路类型词本身不作为高倍率条件。
-const HIGH_MULTIPLIER_PATTERN = /(?:^|[^0-9.])(?:1\.0*[1-9][0-9]*|(?:[2-9][0-9]*|1[0-9]+)(?:\.[0-9]+)?)x(?![0-9.])/i;
+const CORE_COUNTRY_CODE_PATTERNS = [
+  /\bHK\b/,
+  /\bTW\b/,
+  /\bUS\b/,
+  /\bJP\b/,
+  /\bSG\b/,
+];
+
+// 与当前 OpenClash 配置一致：严格匹配数值大于 1x / 1倍的倍率标签。
+// 0.1x、0.5x、1x、1.0x、1倍不属于高倍率；线路类型词本身不作为高倍率条件。
+const HIGH_MULTIPLIER_PATTERN = /(?:^|[^0-9.])(?:1\.0*[1-9][0-9]*|(?:[2-9][0-9]*|1[0-9]+)(?:\.[0-9]+)?)(?:x|倍)(?![0-9.])/i;
 
 function isCoreCountry(name) {
-  return CORE_COUNTRY_PATTERNS.some((pattern) => pattern.test(name));
+  return CORE_COUNTRY_NAME_PATTERNS.some(
+    (pattern, index) =>
+      pattern.test(name) || CORE_COUNTRY_CODE_PATTERNS[index].test(name),
+  );
 }
 
 function isHighMultiplier(name) {
