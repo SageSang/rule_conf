@@ -2,7 +2,7 @@
  * Sub-Store Script Operator
  *
  * 删除订阅说明项、规范重复名称，并按地区排序：
- * 同一地区内，高倍率节点排在普通节点之前；同一等级保留订阅原顺序。
+ * 同一地区内，普通节点排在高倍率节点之前；同一等级保留订阅原顺序。
  */
 
 const EXCLUDE_NAME =
@@ -45,7 +45,7 @@ function getRegionRank(name) {
 }
 
 function getMultiplierRank(name) {
-  return HIGH_MULTIPLIER_PATTERN.test(name) ? 0 : 1;
+  return HIGH_MULTIPLIER_PATTERN.test(name) ? 1 : 0;
 }
 
 async function operator(proxies, targetPlatform, context) {
