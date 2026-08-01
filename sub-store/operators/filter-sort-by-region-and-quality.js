@@ -1,7 +1,7 @@
 /**
  * Sub-Store Script Operator
  *
- * 删除订阅说明项、规范重复名称，并按地区排序：
+ * 删除订阅说明项、合并连接参数完全相同的别名、规范重复名称，并按地区排序：
  * 同一地区内，普通节点排在高倍率节点之前；同一等级保留订阅原顺序。
  */
 
@@ -65,10 +65,63 @@ function getMultiplierRank(name) {
   return HIGH_MULTIPLIER_PATTERN.test(name) ? 1 : 0;
 }
 
+function compareCodePoints(left, right) {
+  const a = Array.from(left);
+  const b = Array.from(right);
+  const length = Math.min(a.length, b.length);
+
+  for (let index = 0; index < length; index += 1) {
+    const difference = a[index].codePointAt(0) - b[index].codePointAt(0);
+    if (difference !== 0) return difference;
+  }
+
+  return a.length - b.length;
+}
+
+function canonicalConnectionJson(value, topLevel = false) {
+  if (value === null) return 'null';
+
+  if (Array.isArray(value)) {
+    return `[${value
+      .map((item) =>
+        item === undefined || typeof item === 'function' || typeof item === 'symbol'
+          ? 'null'
+          : canonicalConnectionJson(item, false),
+      )
+      .join(',')}]`;
+  }
+
+  if (typeof value === 'object') {
+    const keys = Object.keys(value)
+      .filter((key) => {
+        if (
+          topLevel &&
+          (key === 'name' || key.startsWith('_') || (key === 'port' && value.ports))
+        ) {
+          return false;
+        }
+        const item = value[key];
+        return item !== undefined && typeof item !== 'function' && typeof item !== 'symbol';
+      })
+      .sort(compareCodePoints);
+
+    return `{${keys
+      .map(
+        (key) =>
+          `${JSON.stringify(key)}:${canonicalConnectionJson(value[key], false)}`,
+      )
+      .join(',')}}`;
+  }
+
+  const serialized = JSON.stringify(value);
+  return serialized === undefined ? 'null' : serialized;
+}
+
 async function operator(proxies, targetPlatform, context) {
   if (!Array.isArray(proxies)) return proxies;
 
   const usedNames = new Set();
+  const usedConnections = new Set();
   const result = [];
 
   for (const [index, proxy] of proxies.entries()) {
@@ -77,6 +130,12 @@ async function operator(proxies, targetPlatform, context) {
     if (!originalName || EXCLUDE_NAME.test(originalName)) {
       continue;
     }
+
+    const connectionKey = canonicalConnectionJson(proxy, true);
+    if (usedConnections.has(connectionKey)) {
+      continue;
+    }
+    usedConnections.add(connectionKey);
 
     let uniqueName = originalName;
     let number = 2;
@@ -107,4 +166,8 @@ async function operator(proxies, targetPlatform, context) {
         a.originalIndex - b.originalIndex,
     )
     .map(({ proxy }) => proxy);
+}
+
+if (typeof module === 'object' && module.exports) {
+  module.exports = { canonicalConnectionJson, operator };
 }
