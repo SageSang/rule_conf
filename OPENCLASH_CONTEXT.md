@@ -54,6 +54,17 @@
 
 Google Voice 默认设为 `🇺🇸 US`，其后的同国高倍率出口可手动切换。共享的 Google 登录、账户和 API 域名仍由 `🔎 Google` 处理；如果号码注册、通话质量或风控表现不佳，再从此专属组调整，不影响通用 Google 或 FCM。
 
+## 当前新增：Reddit
+
+| 项目 | 配置 |
+| --- | --- |
+| 策略组 | `🟠 Reddit` |
+| 规则源 | `https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml` |
+| 规则位置 | Instagram、X 之后，通用 `💬 社交媒体` 之前；因此 Reddit 域名优先进入专属组。 |
+| 默认策略 | `🇹🇼 TW` |
+
+该规则源当前包含 `reddit.com`、`redd.it`、`redditmedia.com`、`redditstatic.com` 等 8 个 Reddit 域名后缀。
+
 ## 应用策略组默认值
 
 这里的“默认值”是策略组列表第一个项目，即生成后初始选中的策略。
@@ -74,6 +85,7 @@ Google Voice 默认设为 `🇺🇸 US`，其后的同国高倍率出口可手�
 | 💬 WhatsApp | 🇸🇬 SG |
 | 📸 Instagram | 🇸🇬 SG |
 | 🐦 X | 🇺🇸 US |
+| 🟠 Reddit | 🇹🇼 TW |
 | 🧑‍💻 GitHub | 🌐 Default |
 | 🚝 测速工具 | DIRECT |
 | ⬇️ Steam / Epic 下载 | DIRECT |
