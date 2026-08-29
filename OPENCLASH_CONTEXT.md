@@ -65,6 +65,17 @@ Google Voice 默认设为 `🇺🇸 US`，其后的同国高倍率出口可手�
 
 该规则源当前包含 `reddit.com`、`redd.it`、`redditmedia.com`、`redditstatic.com` 等 8 个 Reddit 域名后缀。
 
+## 当前新增：日本原生解锁
+
+| 项目 | 配置 |
+| --- | --- |
+| 策略组 | `🇯🇵 日本原生解锁` |
+| 默认策略 | `🇯🇵 JP` |
+| 规则源 | Pixiv：`https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml`；DLsite：`https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/dlsite.yaml` |
+| 规则位置 | AI / 推送规则之后、国内直连之前；因此优先于国内直连和后续通用规则。 |
+
+该组的选择顺序以 `🇯🇵 JP`、`🇯🇵 JP High` 开头，随后保留其他地区、冷门、手动和自动出口。Pixiv 规则当前包含 `booth.pm`、`fanbox.cc`、`pixiv.cat`、`pixiv.co.jp`、`pixiv.me`、`pixiv.net`、`pixiv.org`、`pximg.net`；DLsite 规则当前包含 `chobit.cc`、`ci-en.jp`、`ci-en.net`、`dlaf.jp`、`dlsite.com`、`dlsite.jp`、`dlsitestudio.com`、`nijiyome.jp`、`triokini.com`、`dlsite.com.tw`。
+
 ## 应用策略组默认值
 
 这里的“默认值”是策略组列表第一个项目，即生成后初始选中的策略。
@@ -86,6 +97,7 @@ Google Voice 默认设为 `🇺🇸 US`，其后的同国高倍率出口可手�
 | 📸 Instagram | 🇸🇬 SG |
 | 🐦 X | 🇺🇸 US |
 | 🟠 Reddit | 🇹🇼 TW |
+| 🇯🇵 日本原生解锁 | 🇯🇵 JP |
 | 🧑‍💻 GitHub | 🌐 Default |
 | 🚝 测速工具 | DIRECT |
 | ⬇️ Steam / Epic 下载 | DIRECT |
