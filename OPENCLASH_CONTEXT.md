@@ -74,7 +74,7 @@ Google Voice 默认设为 `🇺🇸 US`，其后的同国高倍率出口可手�
 | 规则源 | Pixiv：`https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pixiv/Pixiv.yaml`；DLsite：`https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/dlsite.yaml` |
 | 规则位置 | AI / 推送规则之后、国内直连之前；因此优先于国内直连和后续通用规则。 |
 
-该组的选择顺序以 `🇯🇵 JP`、`🇯🇵 JP High` 开头，随后保留其他地区、冷门、手动和自动出口。Pixiv 规则当前包含 `booth.pm`、`fanbox.cc`、`pixiv.cat`、`pixiv.co.jp`、`pixiv.me`、`pixiv.net`、`pixiv.org`、`pximg.net`；DLsite 规则当前包含 `chobit.cc`、`ci-en.jp`、`ci-en.net`、`dlaf.jp`、`dlsite.com`、`dlsite.jp`、`dlsitestudio.com`、`nijiyome.jp`、`triokini.com`、`dlsite.com.tw`；另外以内联规则补充 `fanza.cc`、`fanza.jp`、`fantia.jp`。
+该组的选择顺序以 `🇯🇵 JP`、`🇯🇵 JP High` 开头，随后保留其他地区、冷门、手动和自动出口。Pixiv 规则当前包含 `booth.pm`、`fanbox.cc`、`pixiv.cat`、`pixiv.co.jp`、`pixiv.me`、`pixiv.net`、`pixiv.org`、`pximg.net`；DLsite 规则当前包含 `chobit.cc`、`ci-en.jp`、`ci-en.net`、`dlaf.jp`、`dlsite.com`、`dlsite.jp`、`dlsitestudio.com`、`nijiyome.jp`、`triokini.com`、`dlsite.com.tw`；另外以内联规则补充 `fanza.cc`、`fanza.jp`、`fantia.jp`、`dmm.co.jp`、`dmm.com`。
 
 ## 应用策略组默认值
 
