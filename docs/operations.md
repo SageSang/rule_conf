@@ -10,7 +10,8 @@
 | 修改策略组、默认出口、国家节点匹配 | `meta.ini` |
 | 删除说明节点、去重、重命名、排序 | `sub-store/operators/` |
 | 将订阅转换为本地 SOCKS 出口 | `tools/convert-any-proxy-to-local-socks.js` |
-| 记录设计原因、来源和运维步骤 | `docs/` 或 `CHANGELOG.md` |
+| 记录设计原因和历史决策 | Sidney Vault（见 `../OPENCLASH_CONTEXT.md`） |
+| 维护来源和操作说明 | `docs/sources.md` 与本文件 |
 
 ## 2. 修改 `meta.ini`
 
@@ -38,11 +39,9 @@
 
 ## 5. 变更记录方式
 
-- 当前行为写入当前状态或策略文档。
-- 设计原因和历史取舍写入 `CHANGELOG.md`。
-- 不在“当前状态”文档中堆积“新增功能”小节。
-- 不在文档中复制完整的 `meta.ini` 策略组列表；需要精确行为时直接查看 `meta.ini`。
-- 如果部署现场使用的路径、端口或运行组件发生变化，只记录已确认的当前状态，并注明确认时间。
+- 个人背景、当前核验状态、设计原因与故障历史维护于 Sidney Vault；入口见 [OPENCLASH_CONTEXT.md](../OPENCLASH_CONTEXT.md)。
+- 仓库维护可执行配置、来源与通用操作说明；精确规则和完整默认值直接查看 `meta.ini`。
+- 新取得的现场信息注明设备、版本与日期，再补充 Vault 中同一对象的未知项。
 
 ## 6. 完成前检查
 

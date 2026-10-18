@@ -1,13 +1,13 @@
 # Repository Instructions
 
-本文件是协作者和代码代理进入项目后的最小约束。开始处理项目内容前，先阅读 [OPENCLASH_CONTEXT.md](OPENCLASH_CONTEXT.md)，再根据任务需要阅读 `docs/` 下的对应文档。
+本文件是协作者和代码代理进入项目后的最小约束。需要个人背景、历史决策或现场状态时，通过 vault-context 查询 `rule_conf`（对象 ID：01M23NMWDMERFX8AJP7JQRC0Y1）；唯一长期上下文入口见 [OPENCLASH_CONTEXT.md](OPENCLASH_CONTEXT.md)。实现工作按任务读取 `docs/` 下的对应操作说明。
 
 ## 权威文件
 
 - `meta.ini` 是 OpenClash 的唯一运行维护源，负责规则顺序、远程规则集、策略组和默认出口。
 - `sub-store/operators/` 下的脚本只负责节点订阅的整理、筛选、去重和排序，不负责 OpenClash 分流。
 - `tools/` 下的脚本属于独立的本地 SOCKS 转换链路，不改变 `meta.ini` 的规则语义。
-- 文档只描述设计、当前状态、来源和操作方法，不得作为另一份配置源。
+- Vault 维护长期背景、决策和现场状态；仓库文档维护来源、操作方法和实现契约，不得作为另一份配置源。
 
 ## 修改边界
 

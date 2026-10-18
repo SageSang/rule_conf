@@ -43,3 +43,7 @@
 - [变更记录](CHANGELOG.md)
 - [Sub-Store 脚本](sub-store/README.md)
 - [本地 SOCKS 工具](tools/README.md)
+
+## 长期维护上下文
+
+个人背景、历史决策、核验状态和待补事项统一维护在 [Sidney Vault](obsidian://open?vault=sidney-vault&file=20-Areas%2F%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%2F%E5%AE%9E%E4%BD%93%2Frule_conf%2F%E6%96%87%E6%A1%A3%2F%E8%83%8C%E6%99%AF%E5%AE%9E%E7%8E%B0%E4%B8%8E%E5%8E%86%E5%8F%B2)。本仓库保留代码、使用说明与开发契约；不再复制个人维护日志。未接入该 Vault 的协作者仍可直接使用本文档。
