@@ -12,8 +12,8 @@
 | DLsite | `🇯🇵 日本原生解锁` | `https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/dlsite.yaml` | `clash-classic` | 86400 |
 | Steam 中国下载 | `⬇️ Steam / Epic 下载` | `https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/steam%40cn.yaml` | `clash-classic` | 86400 |
 | Epic 中国下载 | `⬇️ Steam / Epic 下载` | `https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/epicgames%40cn.yaml` | `clash-classic` | 86400 |
-| BT 网段 | `⬇️ BT/PT 下载` | `https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/bt.yaml` | `clash-ipcidr` | 86400 |
-| PT 网段 | `⬇️ BT/PT 下载` | `https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/pt.yaml` | `clash-ipcidr` | 86400 |
+
+GeoIP 文件 `bt.yaml`、`pt.yaml` 分别对应不丹和葡萄牙，不用于 BT/PT 下载识别。现有 `⬇️ BT/PT 下载` 策略组保留，暂不配置替代规则源。
 
 ## blackmatrix7
 
