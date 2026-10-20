@@ -1,0 +1,67 @@
+# Common Hong Kong banks; HSBC HK is handled separately by meta.ini.
+# Reference: https://github.com/NoCapBRB/hk-banks-proxy-rules/blob/21d157315bec0a2b1aa007181326edf73d5663b2/hk_banks_direct.list
+# Domain data only. Policy and priority belong to meta.ini.
+
+# Standard Chartered Hong Kong
+DOMAIN-SUFFIX,standardchartered.com.hk
+# China Construction Bank (Asia)
+DOMAIN-SUFFIX,asia.ccb.com
+# Bank of China (Hong Kong)
+DOMAIN-SUFFIX,bochk.com
+# Bank of East Asia
+DOMAIN-SUFFIX,hkbea.com
+# DBS Hong Kong
+DOMAIN-SUFFIX,dbs.com.hk
+# China CITIC Bank International
+DOMAIN-SUFFIX,cncbinternational.com
+# CMB Wing Lung Bank
+DOMAIN-SUFFIX,cmbwinglungbank.com
+DOMAIN-SUFFIX,winglungbank.com
+# Hang Seng Bank
+DOMAIN-SUFFIX,hangseng.com
+# Shanghai Commercial Bank
+DOMAIN-SUFFIX,shacombank.com.hk
+# Public Bank (Hong Kong)
+DOMAIN-SUFFIX,publicbank.com.hk
+# OCBC Hong Kong, including its previous domain
+DOMAIN-SUFFIX,ocbc.com.hk
+DOMAIN-SUFFIX,ocbcwhhk.com
+# Tai Yau Bank
+DOMAIN-SUFFIX,tybhk.com.hk
+# Chiyu Bank
+DOMAIN-SUFFIX,chiyubank.com
+# Dah Sing Bank
+DOMAIN-SUFFIX,dahsing.com
+# Chong Hing Bank
+DOMAIN-SUFFIX,chbank.com
+# Nanyang Commercial Bank
+DOMAIN-SUFFIX,ncb.com.hk
+# ICBC (Asia)
+DOMAIN-SUFFIX,icbcasia.com
+# Fubon Bank (Hong Kong), excluding the global fubon.com domain
+DOMAIN-SUFFIX,fubonbank.com.hk
+# Citibank Hong Kong
+DOMAIN-SUFFIX,citi.com.hk
+DOMAIN-SUFFIX,citibank.com.hk
+# Bank of Communications Hong Kong
+DOMAIN-SUFFIX,bankcomm.com.hk
+# Bank of Dongguan International
+DOMAIN-SUFFIX,bodintl.com
+# ZA Bank, excluding the rest of ZA Group
+DOMAIN-SUFFIX,bank.za.group
+# livi bank
+DOMAIN-SUFFIX,livibank.com
+# Mox Bank
+DOMAIN-SUFFIX,mox.com
+# WeLab Bank
+DOMAIN-SUFFIX,welab.bank
+# Fusion Bank
+DOMAIN-SUFFIX,fusionbank.com
+# Ping An Digital Bank, including its previous PAO Bank domain
+DOMAIN-SUFFIX,pingandb.com
+DOMAIN-SUFFIX,paob.com.hk
+# Ant Bank (Hong Kong)
+DOMAIN-SUFFIX,antbank.hk
+# EleBank, including its previous Airstar Bank domain
+DOMAIN-SUFFIX,elebank.com
+DOMAIN-SUFFIX,airstarbank.com
