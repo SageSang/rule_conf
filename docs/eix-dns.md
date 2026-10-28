@@ -2,15 +2,13 @@
 
 E-IX 的节点域名需要由其专用 DNS 解析。Sub-Store 合集输出的是节点，原机场配置的 DNS 不会随节点自动进入 Subconverter 的输出。只更新节点或给订阅增加 `flag=anytls`，不能补齐这项解析策略。
 
-`meta.ini` 通过 `clash_rule_base` 引用 [`templates/clash-base.yaml`](../templates/clash-base.yaml)。模板沿用当前转换服务的基础监听设置，增加 `eixcloud.com` 的专用策略；规则、策略组、默认出口继续由 `meta.ini` 维护。
+`meta.ini` 通过 `clash_rule_base` 引用 [`templates/clash-base.yaml`](../templates/clash-base.yaml)。模板沿用当前转换服务的基础监听设置，只增加节点 DNS 默认值与 `eixcloud.com` 的专用策略；规则、策略组、默认出口继续由 `meta.ini` 维护。
 
 ## 解析范围
 
 `proxy-server-nameserver-policy` 将 E-IX 节点域名交给两个官方 HTTPS DNS。`nameserver-policy` 同时覆盖客户端经 DNS 入口查询这些节点域名的情况。两处都只匹配 `eixcloud.com` 及其子域名，普通网站不交给机场 DNS。
 
-`proxy-server-nameserver` 在模板中留空，由现有 OpenClash DNS 覆写注入原节点解析器。现场两条 IP DoH 带有 `#eth1&disable-ipv6=true`，直接追加不带参数的公共解析器会绕开这些约束，因此模板不另设默认值。Mihomo 要求最终运行配置中的该项非空；其他客户端必须保留自己的节点解析器，不能把尚未合并客户端设置的模板直接交给裸 Mihomo 启动。
-
-机场 DoH 的 `#DIRECT` 避免依赖尚未建立的代理节点；DoH 域名的引导解析和连接接口仍由客户端已有设置负责。节点保留域名、SNI 和证书校验，地址变化由 DNS 动态处理，不写死当前 IP。
+`proxy-server-nameserver` 使用现有节点解析所用的阿里、腾讯 IP DoH，因为 Mihomo 要求节点专用策略启用时该项非空。机场 DoH 的 `#DIRECT` 避免依赖尚未建立的代理节点；DoH 域名的引导解析仍由客户端已有设置负责。节点保留域名、SNI 和证书校验，地址变化由 DNS 动态处理，不写死当前 IP。
 
 本模板不接管 DNS 开关、监听、Fake-IP、普通网站、直连及备用 DNS。OpenClash 应保留原有防泄漏覆写；最终运行配置须启用 DNS，并保留模板中的两个域名策略。自定义脚本或客户端若整体替换 DNS 区块，仍需调整其合并方式，不能用关闭防泄漏来代替检查。
 
@@ -19,7 +17,7 @@ E-IX 的节点域名需要由其专用 DNS 解析。Sub-Store 合集输出的是
 | 使用方式 | 取得修改的方法 |
 | --- | --- |
 | OpenClash，使用现有 Subconverter 与 meta.ini | 更新整份订阅配置，检查运行 YAML 的两项域名策略；仅更新节点不够 |
-| 其他 Mihomo 客户端 | 更新整份配置，确认 DNS 已启用、节点解析器非空，且本地 DNS 覆写保留两项域名策略 |
+| 其他 Mihomo 客户端 | 更新整份配置，并确认本地 DNS 覆写保留策略且 DNS 已启用 |
 | Shadowrocket（Mac、iPhone、iPad） | 不能依赖 Clash DNS 字段自动导入；现有 DNS 保护模块需另行适配，本次未修改该模块 |
 | 只导入节点的客户端、订阅集合或 local-socks 转换器 | 不会自动继承该 DNS 区块，需要在实际运行配置中单独适配 |
 | Surge、Stash、Loon 等其他内核或格式 | 不将 Mihomo 专用字段视为通用协议，需按目标格式核验 |

@@ -9,9 +9,10 @@ external-controller: 127.0.0.1:9090
 # DNS 开关、监听、Fake-IP、普通网站和直连解析继续由客户端配置。
 # 使用时须保持客户端 DNS 已启用，并在覆写后保留以下域名策略。
 dns:
-  # 由 OpenClash 的 DNS 覆写注入既有节点解析器，保留接口和 IPv6 约束。
-  # 最终运行配置必须非空；其他客户端也须提供其自己的节点解析器。
-  proxy-server-nameserver: []
+  # 节点策略要求此项非空；沿用现有节点解析使用的国内 IP DoH。
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://1.12.12.12/dns-query
   proxy-server-nameserver-policy:
     '+.eixcloud.com':
       - https://zone.rlose.com:39933/api-query#DIRECT
