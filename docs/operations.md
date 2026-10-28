@@ -8,6 +8,7 @@
 | --- | --- |
 | 新增应用规则、调整规则顺序 | `meta.ini` |
 | 修改策略组、默认出口、国家节点匹配 | `meta.ini` |
+| E-IX 节点 DNS 与 Clash 基础模板 | `meta.ini` 引用的 `templates/clash-base.yaml`，见 [使用边界](eix-dns.md) |
 | 删除说明节点、去重、重命名、排序 | `sub-store/operators/` |
 | 将订阅转换为本地 SOCKS 出口 | `tools/convert-any-proxy-to-local-socks.js` |
 | 记录设计原因和历史决策 | Sidney Vault（见 `../OPENCLASH_CONTEXT.md`） |
