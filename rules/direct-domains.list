@@ -1,0 +1,3 @@
+# 域名匹配，出口与优先级由 meta.ini 指定。
+DOMAIN-SUFFIX,281379.xyz
+DOMAIN,jike.teracloud.jp
